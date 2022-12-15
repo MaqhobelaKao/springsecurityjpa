@@ -19,7 +19,7 @@ public class MyUserDetails implements UserDetails {
 	private List<SimpleGrantedAuthority> authorities;
 	
 	public MyUserDetails(User user) {
-		this.userName = user.getUsername();
+		this.userName = user.getUserName();
 		this.password = user.getPassword();
 		this.active = user.isActive();
 		this.authorities = Arrays.stream(user.getRoles().split(","))
